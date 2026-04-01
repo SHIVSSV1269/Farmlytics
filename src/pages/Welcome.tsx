@@ -1,4 +1,3 @@
-
 import React from "react";
 import { View, Text, ScrollView, TouchableOpacity, ImageBackground, StyleSheet } from "react-native";
 import Feather from "react-native-vector-icons/Feather";
@@ -8,7 +7,7 @@ import heroFarmingImg from "../assets/hero-farming.png";
 
 const features = [
   {
-    icon: "zap", // Using Feather icons as placeholders
+    icon: "zap",
     title: "Smart Crop Advisory",
     description: "Get personalized farming guidance based on your location and crop type",
   },
@@ -41,7 +40,7 @@ const Welcome = () => {
         imageStyle={{ opacity: 0.2 }}
       >
         <LinearGradient
-          colors={["rgba(14,14,14,0.9)", "rgba(14,14,14,0.7)", "rgba(14,14,14,0.9)"]}
+          colors={["rgba(255,255,255,0.8)", "rgba(255,255,255,0.6)", "rgba(255,255,255,0.8)"]}
           style={StyleSheet.absoluteFill}
         />
         <View style={styles.heroContent}>
@@ -52,11 +51,11 @@ const Welcome = () => {
 
           <View style={styles.heroButtons}>
             <TouchableOpacity style={[styles.button, styles.buttonHero]} onPress={() => navigation.navigate("Login")}>
-              <Feather name="zap" size={20} color="#000" style={{ marginRight: 8 }} />
-              <Text style={[styles.buttonText, { color: "#000" }]}>Get Started</Text>
+              <Feather name="zap" size={20} color="#fff" style={{ marginRight: 8 }} />
+              <Text style={styles.buttonText}>Get Started</Text>
             </TouchableOpacity>
             <TouchableOpacity style={[styles.button, styles.buttonEarth]} onPress={() => navigation.navigate("Dashboard")}>
-              <Text style={[styles.buttonText, { color: "#FFF" }]}>View Demo</Text>
+              <Text style={[styles.buttonText, { color: "#333" }]}>View Demo</Text>
             </TouchableOpacity>
           </View>
 
@@ -85,13 +84,13 @@ const Welcome = () => {
       </View>
 
       {/* CTA Section */}
-      <LinearGradient colors={["#1A1A1A", "#000000"]} style={styles.ctaSection}>
+      <LinearGradient colors={["#34D399", "#10B981"]} style={styles.ctaSection}>
         <Text style={styles.ctaTitle}>Ready to Transform Your Farming?</Text>
         <Text style={styles.ctaSubtitle}>
           Join thousands of farmers already using Smart Crop Advisory to increase their yields and reduce costs
         </Text>
         <TouchableOpacity style={[styles.button, styles.buttonCTA]} onPress={() => navigation.navigate("Login")}>
-          <Text style={[styles.buttonText, { color: "#000" }]}>Start Your Journey</Text>
+          <Text style={styles.buttonText}>Start Your Journey</Text>
         </TouchableOpacity>
       </LinearGradient>
     </ScrollView>
@@ -101,30 +100,29 @@ const Welcome = () => {
 export default Welcome;
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0E0E0E" },
+  container: { flex: 1, backgroundColor: "#E0F2F1" },
   hero: { height: 500, justifyContent: "center", alignItems: "center" },
   heroContent: { alignItems: "center", paddingHorizontal: 16 },
-  heroTitle: { fontSize: 36, fontWeight: "700", textAlign: "center", color: "#FFFFFF", letterSpacing: 1 },
-  heroSubtitle: { fontSize: 16, textAlign: "center", color: "#AAAAAA", marginVertical: 16, maxWidth: 320, lineHeight: 24 },
+  heroTitle: { fontSize: 36, fontWeight: "bold", textAlign: "center", color: "#059669" },
+  heroSubtitle: { fontSize: 16, textAlign: "center", color: "#555", marginVertical: 16, maxWidth: 300 },
   heroButtons: { flexDirection: "row", marginTop: 16, gap: 12 },
-  button: { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingVertical: 12, paddingHorizontal: 20, borderRadius: 8 },
-  buttonHero: { backgroundColor: "#FFFFFF" },
-  buttonEarth: { backgroundColor: "#1A1A1A", borderWidth: 1, borderColor: "#333" },
-  buttonCTA: { backgroundColor: "#FFFFFF", marginTop: 20, paddingHorizontal: 24 },
-  buttonText: { fontSize: 16, fontWeight: "600", color: "#000" },
-  heroFooter: { fontSize: 12, color: "#666", marginTop: 24, textAlign: "center", textTransform: "uppercase", letterSpacing: 0.5 },
+  button: { flexDirection: "row", alignItems: "center", justifyContent: "center", paddingVertical: 12, paddingHorizontal: 20, borderRadius: 12 },
+  buttonHero: { backgroundColor: "#059669" },
+  buttonEarth: { backgroundColor: "#D1FAE5" },
+  buttonCTA: { backgroundColor: "#064E3B", marginTop: 16 },
+  buttonText: { fontSize: 16, fontWeight: "bold", color: "#fff" },
+  heroFooter: { fontSize: 12, color: "#777", marginTop: 16, textAlign: "center" },
 
-  section: { paddingHorizontal: 16, paddingVertical: 32 },
-  sectionTitle: { fontSize: 24, fontWeight: "700", textAlign: "center", marginBottom: 8, color: "#FFFFFF" },
-  sectionSubtitle: { fontSize: 14, color: "#888888", textAlign: "center", marginBottom: 32, lineHeight: 22 },
+  section: { paddingHorizontal: 16, paddingVertical: 24 },
+  sectionTitle: { fontSize: 24, fontWeight: "bold", textAlign: "center", marginBottom: 8 },
+  sectionSubtitle: { fontSize: 14, color: "#555", textAlign: "center", marginBottom: 24 },
   featuresGrid: { flexDirection: "row", flexWrap: "wrap", justifyContent: "space-between" },
-  featureCard: { backgroundColor: "#1A1A1A", borderWidth: 1, borderColor: "#2A2A2A", borderRadius: 8, width: "48%", padding: 16, marginBottom: 16 },
-  featureIcon: { backgroundColor: "#2A2A2A", width: 48, height: 48, borderRadius: 8, marginBottom: 12, justifyContent: "center", alignItems: "center" },
-  featureTitle: { fontSize: 15, fontWeight: "600", color: "#FFFFFF", marginBottom: 6 },
-  featureDesc: { fontSize: 12, color: "#888888", lineHeight: 18 },
+  featureCard: { backgroundColor: "#059669", borderRadius: 12, width: "48%", padding: 16, marginBottom: 16 },
+  featureIcon: { backgroundColor: "#10B981", padding: 12, borderRadius: 50, marginBottom: 8, alignItems: "center" },
+  featureTitle: { fontSize: 16, fontWeight: "bold", color: "#fff", marginBottom: 4 },
+  featureDesc: { fontSize: 12, color: "#E0F2F1" },
 
-  ctaSection: { paddingVertical: 40, alignItems: "center", borderTopWidth: 1, borderTopColor: "#1A1A1A" },
-  ctaTitle: { fontSize: 24, fontWeight: "700", color: "#FFFFFF", textAlign: "center", marginBottom: 12 },
-  ctaSubtitle: { fontSize: 14, color: "#AAAAAA", textAlign: "center", maxWidth: 320, lineHeight: 22 },
+  ctaSection: { paddingVertical: 32, alignItems: "center" },
+  ctaTitle: { fontSize: 24, fontWeight: "bold", color: "#fff", textAlign: "center", marginBottom: 12 },
+  ctaSubtitle: { fontSize: 14, color: "#D1FAE5", textAlign: "center", maxWidth: 300 },
 });
-

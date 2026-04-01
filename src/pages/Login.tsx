@@ -69,7 +69,7 @@ const Login = () => {
       <ScrollView contentContainerStyle={styles.container} keyboardShouldPersistTaps="handled">
         {/* Back to Welcome */}
         <TouchableOpacity style={styles.backBtn} onPress={() => navigation.goBack()}>
-          <Feather name="arrow-left" size={20} color="#FFFFFF" />
+          <Feather name="arrow-left" size={20} color="#059669" />
           <Text style={styles.backText}>Back</Text>
         </TouchableOpacity>
 
@@ -99,7 +99,7 @@ const Login = () => {
               <TextInput
                 style={styles.input}
                 placeholder="Full Name"
-                placeholderTextColor="#666666"
+                placeholderTextColor="#9ca3af"
                 value={formData.name}
                 onChangeText={(text) => setFormData({ ...formData, name: text })}
               />
@@ -127,7 +127,7 @@ const Login = () => {
                 <TextInput
                   style={styles.input}
                   placeholder="Location (Village, District, State)"
-                  placeholderTextColor="#666666"
+                  placeholderTextColor="#9ca3af"
                   value={formData.location}
                   onChangeText={(text) => setFormData({ ...formData, location: text })}
                 />
@@ -138,7 +138,7 @@ const Login = () => {
                 <TextInput
                   style={styles.input}
                   placeholder="Preferred Language"
-                  placeholderTextColor="#666666"
+                  placeholderTextColor="#9ca3af"
                   value={formData.language}
                   onChangeText={(text) => setFormData({ ...formData, language: text })}
                 />
@@ -149,7 +149,7 @@ const Login = () => {
                 <TextInput
                   style={styles.input}
                   placeholder="Farm Size (acres)"
-                  placeholderTextColor="#666666"
+                  placeholderTextColor="#9ca3af"
                   keyboardType="numeric"
                   value={formData.farmSize}
                   onChangeText={(text) => setFormData({ ...formData, farmSize: text })}
@@ -161,7 +161,7 @@ const Login = () => {
                 <TextInput
                   style={styles.input}
                   placeholder="Main Crop (e.g. Wheat, Rice)"
-                  placeholderTextColor="#666666"
+                  placeholderTextColor="#9ca3af"
                   value={formData.mainCrop}
                   onChangeText={(text) => setFormData({ ...formData, mainCrop: text })}
                 />
@@ -195,7 +195,7 @@ const Login = () => {
 
           {/* Submit */}
           <TouchableOpacity style={styles.button} onPress={handleSubmit} activeOpacity={0.85}>
-            <Feather name="arrow-right-circle" size={18} color="#000" style={{ marginRight: 8 }} />
+            <Feather name="arrow-right-circle" size={18} color="#fff" style={{ marginRight: 8 }} />
             <Text style={styles.buttonText}>{isLogin ? "Login" : "Create Account"}</Text>
           </TouchableOpacity>
 
@@ -221,112 +221,111 @@ const Login = () => {
 export default Login;
 
 const styles = StyleSheet.create({
-  safeArea: { flex: 1, backgroundColor: "#0E0E0E" },
+  safeArea: { flex: 1, backgroundColor: "#f0fdf4" },
   container: {
     flexGrow: 1,
     padding: 20,
-    backgroundColor: "#0E0E0E",
+    backgroundColor: "#f0fdf4",
   },
   backBtn: {
     flexDirection: "row",
     alignItems: "center",
-    marginBottom: 24,
+    marginBottom: 16,
   },
-  backText: { color: "#FFFFFF", fontWeight: "600", marginLeft: 6, fontSize: 15 },
+  backText: { color: "#059669", fontWeight: "600", marginLeft: 4, fontSize: 15 },
 
-  logoContainer: { alignItems: "center", marginBottom: 24 },
+  logoContainer: { alignItems: "center", marginBottom: 20 },
   logoCircle: {
     width: 64,
     height: 64,
-    borderRadius: 16,
-    backgroundColor: "#1A1A1A",
-    borderWidth: 1,
-    borderColor: "#333",
+    borderRadius: 32,
+    backgroundColor: "#059669",
     justifyContent: "center",
     alignItems: "center",
-    marginBottom: 12,
+    marginBottom: 8,
+    elevation: 4,
+    shadowColor: "#059669",
+    shadowOpacity: 0.3,
+    shadowRadius: 8,
   },
-  appName: { fontSize: 24, fontWeight: "700", color: "#FFFFFF", letterSpacing: 0.5 },
+  appName: { fontSize: 22, fontWeight: "bold", color: "#059669" },
 
   card: {
-    backgroundColor: "#000000",
-    padding: 24,
-    borderRadius: 12,
-    borderWidth: 1,
-    borderColor: "#1A1A1A",
+    backgroundColor: "#fff",
+    padding: 22,
+    borderRadius: 20,
     elevation: 4,
     shadowColor: "#000",
-    shadowOpacity: 0.4,
+    shadowOpacity: 0.08,
     shadowRadius: 10,
-    shadowOffset: { width: 0, height: 4 },
   },
   title: {
-    fontSize: 22,
-    fontWeight: "700",
+    fontSize: 20,
+    fontWeight: "bold",
     textAlign: "center",
-    marginBottom: 8,
-    color: "#FFFFFF",
+    marginBottom: 6,
+    color: "#111827",
   },
   subtitle: {
     textAlign: "center",
-    marginBottom: 24,
-    color: "#AAAAAA",
+    marginBottom: 20,
+    color: "#6b7280",
     fontSize: 13,
-    lineHeight: 20,
+    lineHeight: 18,
   },
 
   inputWrapper: {
     flexDirection: "row",
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#2A2A2A",
-    borderRadius: 8,
-    marginBottom: 16,
-    backgroundColor: "#121212",
+    borderColor: "#d1d5db",
+    borderRadius: 10,
+    marginBottom: 12,
+    backgroundColor: "#f9fafb",
   },
-  inputIcon: { paddingLeft: 14, paddingRight: 6 },
+  inputIcon: { paddingLeft: 12, paddingRight: 4 },
   input: {
     flex: 1,
-    paddingVertical: 14,
-    paddingRight: 14,
-    fontSize: 15,
-    color: "#FFFFFF",
+    paddingVertical: 11,
+    paddingRight: 12,
+    fontSize: 14,
+    color: "#111827",
   },
 
-  langLabel: { fontSize: 12, color: "#888888", marginBottom: 10, marginTop: 4, fontWeight: "500" },
-  langChips: { flexDirection: "row", flexWrap: "wrap", marginBottom: 24, gap: 8 },
+  langLabel: { fontSize: 12, color: "#6b7280", marginBottom: 8, marginTop: 2 },
+  langChips: { flexDirection: "row", flexWrap: "wrap", marginBottom: 16, gap: 6 },
   chip: {
     borderWidth: 1,
-    borderColor: "#2A2A2A",
-    borderRadius: 8,
-    paddingHorizontal: 12,
-    paddingVertical: 6,
-    backgroundColor: "#1A1A1A",
+    borderColor: "#d1d5db",
+    borderRadius: 20,
+    paddingHorizontal: 10,
+    paddingVertical: 4,
+    backgroundColor: "#f9fafb",
   },
-  chipSelected: { borderColor: "#FFFFFF", backgroundColor: "#FFFFFF" },
-  chipText: { fontSize: 12, color: "#AAAAAA", fontWeight: "500" },
-  chipTextSelected: { color: "#000000", fontWeight: "700" },
+  chipSelected: { borderColor: "#059669", backgroundColor: "#d1fae5" },
+  chipText: { fontSize: 11, color: "#6b7280" },
+  chipTextSelected: { color: "#059669", fontWeight: "600" },
 
   button: {
-    backgroundColor: "#FFFFFF",
-    paddingVertical: 16,
-    borderRadius: 8,
+    backgroundColor: "#059669",
+    paddingVertical: 14,
+    borderRadius: 12,
     alignItems: "center",
-    marginTop: 8,
+    marginTop: 6,
     flexDirection: "row",
     justifyContent: "center",
+    elevation: 2,
   },
-  buttonText: { color: "#000000", fontWeight: "700", fontSize: 16 },
+  buttonText: { color: "#fff", fontWeight: "bold", fontSize: 15 },
 
-  switchWrapper: { marginTop: 24, alignItems: "center" },
-  switchText: { color: "#888888", fontSize: 14 },
-  switchLink: { color: "#FFFFFF", fontWeight: "700" },
+  switchWrapper: { marginTop: 16, alignItems: "center" },
+  switchText: { color: "#6b7280", fontSize: 13 },
+  switchLink: { color: "#059669", fontWeight: "bold" },
 
   footerText: {
-    marginTop: 20,
+    marginTop: 14,
     fontSize: 11,
-    color: "#555555",
+    color: "#9ca3af",
     textAlign: "center",
-    lineHeight: 16,
   },
 });

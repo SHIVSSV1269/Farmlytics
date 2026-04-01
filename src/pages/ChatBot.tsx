@@ -28,7 +28,7 @@ interface Message {
 }
 
 const ChatBot = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
   const [messages, setMessages] = useState<Message[]>([
     {
       id: "1",
@@ -160,7 +160,7 @@ const ChatBot = () => {
         {/* Typing Indicator */}
         {isTyping && (
           <View style={styles.typingIndicator}>
-            <ActivityIndicator size="small" color="#888" />
+            <ActivityIndicator size="small" color="#2E7D32" />
             <Text style={styles.typingText}>AI is analyzing...</Text>
           </View>
         )}
@@ -182,7 +182,7 @@ const ChatBot = () => {
             style={[styles.sendBtn, !inputText.trim() && styles.disabledSend]}
             disabled={!inputText.trim()}
           >
-            <Feather name="send" size={20} color={inputText.trim() ? "#000" : "#666"} />
+            <Feather name="send" size={20} color="#FFF" />
           </TouchableOpacity>
         </View>
       </KeyboardAvoidingView>
@@ -191,89 +191,90 @@ const ChatBot = () => {
 };
 
 const styles = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#0E0E0E" },
+  container: { flex: 1, backgroundColor: "#F5F7F8" },
   flex: { flex: 1 },
   header: {
-    backgroundColor: "#000000",
+    backgroundColor: "#2E7D32",
     padding: 16,
     flexDirection: "row",
     alignItems: "center",
-    borderBottomWidth: 1,
-    borderBottomColor: "#1A1A1A",
+    borderBottomLeftRadius: 20,
+    borderBottomRightRadius: 20,
     elevation: 4,
     shadowColor: "#000",
-    shadowOffset: { width: 0, height: 4 },
-    shadowOpacity: 0.3,
-    shadowRadius: 6,
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
   },
   backBtn: { padding: 4, marginRight: 12 },
   headerInfo: { flex: 1 },
-  title: { fontSize: 18, fontWeight: "600", color: "#FFFFFF", letterSpacing: 0.5 },
-  statusRow: { flexDirection: "row", alignItems: "center", marginTop: 4 },
-  statusDot: { width: 6, height: 6, borderRadius: 3, backgroundColor: "#00FF66", marginRight: 8 },
-  subtitle: { fontSize: 12, color: "#888888", fontWeight: "500" },
+  title: { fontSize: 18, fontWeight: "bold", color: "#FFF" },
+  statusRow: { flexDirection: "row", alignItems: "center", marginTop: 2 },
+  statusDot: { width: 8, height: 8, borderRadius: 4, backgroundColor: "#4CAF50", marginRight: 6 },
+  subtitle: { fontSize: 12, color: "#E8F5E9" },
   chatList: { padding: 16, paddingBottom: 32 },
   messageContainer: {
-    maxWidth: "85%",
-    padding: 14,
-    borderRadius: 8,
+    maxWidth: "80%",
+    padding: 12,
+    borderRadius: 16,
     marginBottom: 16,
+    elevation: 1,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 1 },
+    shadowOpacity: 0.05,
+    shadowRadius: 2,
   },
   botMessage: {
     alignSelf: "flex-start",
-    backgroundColor: "#1A1A1A",
-    borderWidth: 1,
-    borderColor: "#2A2A2A",
-    borderBottomLeftRadius: 2,
+    backgroundColor: "#FFF",
+    borderBottomLeftRadius: 4,
   },
   userMessage: {
     alignSelf: "flex-end",
-    backgroundColor: "#2B2B2B",
-    borderBottomRightRadius: 2,
+    backgroundColor: "#2E7D32",
+    borderBottomRightRadius: 4,
   },
-  messageText: { fontSize: 15, lineHeight: 24 },
-  botText: { color: "#E0E0E0" },
-  userText: { color: "#FFFFFF" },
-  messageImage: { width: 220, height: 160, borderRadius: 6, marginBottom: 10, backgroundColor: '#000' },
-  timestamp: { fontSize: 10, color: "#555", marginTop: 8, alignSelf: "flex-end", fontWeight: "600" },
+  messageText: { fontSize: 15, lineHeight: 22 },
+  botText: { color: "#333" },
+  userText: { color: "#FFF" },
+  messageImage: { width: 200, height: 150, borderRadius: 12, marginBottom: 8, backgroundColor: '#EEE' },
+  timestamp: { fontSize: 10, color: "#999", marginTop: 4, alignSelf: "flex-end" },
   typingIndicator: {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 20,
-    paddingVertical: 12,
+    paddingVertical: 8,
   },
-  typingText: { fontSize: 12, color: "#666", marginLeft: 10, fontStyle: "italic", fontWeight: "500" },
+  typingText: { fontSize: 12, color: "#666", marginLeft: 8, fontStyle: "italic" },
   inputBar: {
     flexDirection: "row",
     alignItems: "center",
     padding: 12,
-    backgroundColor: "#000000",
+    backgroundColor: "#FFF",
     borderTopWidth: 1,
-    borderTopColor: "#1A1A1A",
+    borderTopColor: "#EEE",
   },
-  iconBtn: { padding: 8, marginRight: 8 },
+  iconBtn: { padding: 8, marginRight: 4 },
   input: {
     flex: 1,
-    backgroundColor: "#121212",
-    borderWidth: 1,
-    borderColor: "#2A2A2A",
-    borderRadius: 8,
+    backgroundColor: "#F0F2F5",
+    borderRadius: 24,
     paddingHorizontal: 16,
-    paddingVertical: 10,
-    maxHeight: 120,
+    paddingVertical: 8,
+    maxHeight: 100,
     fontSize: 15,
-    color: "#FFFFFF",
+    color: "#333",
   },
   sendBtn: {
     width: 44,
     height: 44,
-    borderRadius: 8,
-    backgroundColor: "#FFFFFF",
+    borderRadius: 22,
+    backgroundColor: "#2E7D32",
     justifyContent: "center",
     alignItems: "center",
-    marginLeft: 12,
+    marginLeft: 8,
   },
-  disabledSend: { backgroundColor: "#1A1A1A" },
+  disabledSend: { backgroundColor: "#A5D6A7" },
 });
 
 export default ChatBot;
