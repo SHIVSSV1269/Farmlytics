@@ -1,0 +1,30 @@
+{
+  "candidates": [
+    {
+      "content": {
+        "parts": [
+          {
+            "text": "Please describe the plant image to me in detail, as I cannot directly view images.\n\nTo give you the best possible analysis, please tell me about the following:\n\n**1. Plant Identification Clues:**\n*   **Overall appearance:** Is it a small potted plant, a large shrub, a tree, a vine, a succulent, a flowering plant?\n*   **Leaves:**\n    *   **Shape:** (e.g., heart-shaped, oval, long and narrow, lobed, needle-like, round)\n    *   **Size:** (e.g., very small, palm-sized, dinner plate-sized)\n    *   **Color:** (e.g., solid green, variegated with white/yellow, dark green, light green, reddish)\n    *   **Texture:** (e.g., glossy, matte, fuzzy, leathery, thin)\n    *   **Arrangement:** (e.g., opposite, alternate, clustered, growing from a central point)\n    *   **Edges:** (e.g., smooth, serrated/toothed, wavy)\n*   **Stems/Trunk:** (e.g., woody, herbaceous, thick, thin, vining, upright, branched, hairy)\n*   **Flowers (if present):**\n    *   **Color:**\n    *   **Shape:**\n    *   **Size:**\n    *   **How they grow:** (e.g., single, clusters, spikes)\n*   **Fruits/Seeds (if present):**\n*   **Any unique features:** (e.g., thorns, aerial roots, milky sap, specific scent)\n*   **Location:** Is it indoors or outdoors? In a pot or in the ground?\n\n**2. Disease/Problem Clues (for any visible issues):**\n*   **Where are the issues occurring?** (e.g., on older leaves, new growth, specific areas of the plant, stems, roots, flowers)\n*   **What do the affected areas look like?**\n    *   **Color changes:** (e.g., yellowing, browning, blackening, reddish/purple tints)\n    *   **Spots/Lesions:** (e.g., small, large, circular, irregular, dark, light, sunken, raised, watery, dry, crispy, mushy, with halos)\n    *   **Texture changes:** (e.g., wilting, drooping, crispy, soft/mushy, sticky, powdery, fuzzy, distorted, stunted)\n    *   **Presence of pests:** (e.g., small bugs, webbing, sticky residue, holes in leaves)\n    *   **Growth habit changes:** (e.g., stunted growth, wilting, defoliation, misshapen leaves/flowers)\n*   **How widespread is the issue?** (e.g., one leaf, a few leaves, entire plant)\n*   **How quickly did it develop?**\n*   **Any recent changes to its environment or care?** (e.g., moved to a new spot, repotted, changed watering schedule, new fertilizer, temperature fluctuations)\n\nOnce you provide these details, I'll do my best to identify the plant and diagnose any potential issues!"
+          }
+        ],
+        "role": "model"
+      },
+      "finishReason": "STOP",
+      "index": 0
+    }
+  ],
+  "usageMetadata": {
+    "promptTokenCount": 15,
+    "candidatesTokenCount": 697,
+    "totalTokenCount": 2269,
+    "promptTokensDetails": [
+      {
+        "modality": "TEXT",
+        "tokenCount": 15
+      }
+    ],
+    "thoughtsTokenCount": 1557
+  },
+  "modelVersion": "gemini-2.5-flash",
+  "responseId": "whjNaaXyKarQg8UPj6yn-As"
+}
